@@ -42,8 +42,10 @@ public class Main {
 
         PDDocumentCatalog catalog = doc.getDocumentCatalog();
         PDDocumentNameDictionary names = catalog.getNames();
-        names.setEmbeddedFiles(null);
-        names.setJavascript(null);
+        if (names != null) {
+            names.setEmbeddedFiles(null);
+            names.setJavascript(null);
+        }
 
         for (int i=0; i<doc.getNumberOfPages(); i++) {
             cleanPage(doc, doc.getPage(i), watermark, regex);
