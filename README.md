@@ -35,3 +35,5 @@ Remove a watermark using a case-insensitive keyword:
 Using Maven:
 
     mvn assembly:single
+
+The final `jar` will be inside of the `target/` directory.
