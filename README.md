@@ -30,6 +30,10 @@ Remove a watermark using a case-insensitive keyword:
 
     java -jar pdf-strip-watermark-0.1-all.jar in.pdf out.pdf 'match:(?i).*confidential.*'
     
+## Download
+
+[pdf-strip-watermark-0.1-all.jar.zip](https://github.com/kenoph/pdf-strip-watermark/files/823009/pdf-strip-watermark-0.1-all.jar.zip)
+    
 ## Building
 
 Using Maven:
