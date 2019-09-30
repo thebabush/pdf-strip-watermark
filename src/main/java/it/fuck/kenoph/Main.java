@@ -35,6 +35,10 @@ public class Main {
         System.out.println("Title: " + name);
 
         PDDocument doc = PDDocument.load(new File(path));
+        doc.setAllSecurityToBeRemoved(true);
+        if (doc.isEncrypted()) {
+            System.out.println("Document is encrypted");
+        }
         if (changeTitle) {
             PDDocumentInformation info = doc.getDocumentInformation();
             info.setTitle(name);
@@ -65,7 +69,12 @@ public class Main {
         ArrayList<Integer> remove = new ArrayList<>();
         for (int i=0; i<tokens.size(); i++) {
             Object token = tokens.get(i);
-            if (token instanceof COSString) {
+             if (token instanceof COSName) {
+            	COSName cosname = (COSName) token;
+            	if(cosname.getName().startsWith("Fm")) {
+            		 i = removeState(tokens, remove, i);
+            	}
+            } else if (token instanceof COSString) {
                 String str = ((COSString) token).getString();
 
                 if (regex) {
