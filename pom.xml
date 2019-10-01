@@ -15,10 +15,9 @@
                   <version>2.0.4</version>
          </dependency>
          <dependency>
-                  <groupId>org.bouncycastle</groupId>
-                  <artifactId>bcprov-jdk16</artifactId>
-                  <version>1.46</version>
-                  <type>jar</type>
+             <groupId>org.bouncycastle</groupId>
+             <artifactId>bcprov-jdk15on</artifactId>
+             <version>1.63</version>
          </dependency>
     </dependencies>
 
