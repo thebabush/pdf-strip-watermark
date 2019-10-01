@@ -32,7 +32,7 @@ Remove a watermark using a case-insensitive keyword:
     
 ## Download
 
-[pdf-strip-watermark-0.3-all.jar](https://github.com/enimiste/pdf-strip-watermark/blob/master/pdf-strip-watermark-0.3-all.jar)
+[pdf-strip-watermark-0.3-all.jar](https://github.com/thebabush/pdf-strip-watermark/blob/master/pdf-strip-watermark-0.3-all.jar)
     
 ## Building
 
